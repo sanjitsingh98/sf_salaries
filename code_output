@@ -226,3 +226,23 @@ Year
 Here you can see that the difference in mean overtimepay received by the police department and fire department
 Police department  11981.0
 Fire department  26365.0
+
+Top 5:
+TotalPayBenefits                                        JobTitle
+0              567595.43  GENERAL MANAGER-METROPOLITAN TRANSIT AUTHORITY
+1              538909.28                 CAPTAIN III (POLICE DEPARTMENT)
+110524         510732.68                                  DEPUTY CHIEF 3
+110525         479652.21                               ASST MED EXAMINER
+110526         436224.36                        CHIEF INVESTMENT OFFICER
+        Benefits                  JobTitle
+110526  96570.66  CHIEF INVESTMENT OFFICER
+110527  91302.46           CHIEF OF POLICE
+110528  91201.66    CHIEF, FIRE DEPARTMENT
+110530  89772.32               DEPT HEAD V
+110525  89540.23         ASST MED EXAMINER
+        OvertimePay                         JobTitle
+1         245131.88  CAPTAIN III (POLICE DEPARTMENT)
+36155     220909.48     LIEUTENANT, FIRE SUPPRESSION
+72960     196689.18                   DEPUTY SHERIFF
+36159     192424.49        EMT/PARAMEDIC/FIREFIGHTER
+110567    173547.73                   DEPUTY SHERIFF
