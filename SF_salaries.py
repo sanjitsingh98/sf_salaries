@@ -100,7 +100,13 @@ print("Fire department ",round(df[df['JobTitle'].apply(lambda x: fire_string(x))
 #print(df[df['JobTitle'].apply(lambda x: fire_string(x))]["JobTitle"].value_counts().head(10))
 #print(df[df['JobTitle'].apply(lambda x: public_string(x))]["JobTitle"].value_counts().head(10))
 
-
+#here we display the top 5 job titles with max pay+benefits,benefits and overtimepay
+d1=df.sort_values('TotalPayBenefits',ascending=False).head(5)
+print(d1[['TotalPayBenefits','JobTitle']])
+d1=df.sort_values('Benefits',ascending=False).head(5)
+print(d1[['Benefits','JobTitle']])
+d1=df.sort_values('OvertimePay',ascending=False).head(5)
+print(d1[['OvertimePay','JobTitle']])
 
 
 
