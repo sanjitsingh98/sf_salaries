@@ -1,0 +1,228 @@
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 148619 entries, 0 to 148618
+Data columns (total 14 columns):
+Id                  148619 non-null int64
+EmployeeName        148619 non-null object
+JobTitle            148619 non-null object
+BasePay             148017 non-null float64
+OvertimePay         148619 non-null float64
+OtherPay            148619 non-null float64
+Benefits            112464 non-null float64
+TotalPay            148619 non-null float64
+TotalPayBenefits    148619 non-null float64
+Year                148619 non-null int64
+Notes               0 non-null float64
+Agency              148619 non-null object
+Status              0 non-null float64
+Job                 148619 non-null object
+dtypes: float64(8), int64(2), object(4)
+memory usage: 13.6+ MB
+None
+   Id  ...                                             Job
+0   1  ...  GENERAL MANAGER-METROPOLITAN TRANSIT AUTHORITY
+1   2  ...                 CAPTAIN III (POLICE DEPARTMENT)
+2   3  ...                 CAPTAIN III (POLICE DEPARTMENT)
+3   4  ...            WIRE ROPE CABLE MAINTENANCE MECHANIC
+4   5  ...    DEPUTY CHIEF OF DEPARTMENT,(FIRE DEPARTMENT)
+
+[5 rows x 14 columns]
+<class 'pandas.core.frame.DataFrame'>
+RangeIndex: 148619 entries, 0 to 148618
+Data columns (total 12 columns):
+Id                  148619 non-null int64
+EmployeeName        148619 non-null object
+JobTitle            148619 non-null object
+BasePay             148017 non-null float64
+OvertimePay         148619 non-null float64
+OtherPay            148619 non-null float64
+Benefits            112464 non-null float64
+TotalPay            148619 non-null float64
+TotalPayBenefits    148619 non-null float64
+Year                148619 non-null int64
+Agency              148619 non-null object
+Job                 148619 non-null object
+dtypes: float64(6), int64(2), object(4)
+memory usage: 11.3+ MB
+None
+
+details about the person with the highest pay+benefits
+Id                                                               1
+EmployeeName                                        NATHANIEL FORD
+JobTitle            GENERAL MANAGER-METROPOLITAN TRANSIT AUTHORITY
+BasePay                                                     167411
+OvertimePay                                                      0
+OtherPay                                                    400184
+Benefits                                                       NaN
+TotalPay                                                    567595
+TotalPayBenefits                                            567595
+Year                                                          2011
+Agency                                               San Francisco
+Job                 GENERAL MANAGER-METROPOLITAN TRANSIT AUTHORITY
+Name: 0, dtype: object
+
+description about the BasePay,OvertimePay,Benefits and TotalPayBenefits
+count    148017.0
+mean      66338.0
+std       42759.0
+min        -166.0
+25%       33618.0
+50%       65015.0
+75%       94692.0
+max      319275.0
+Name: BasePay, dtype: float64
+count    148619.0
+mean       5067.0
+std       11455.0
+min          -0.0
+25%           0.0
+50%           0.0
+75%        4659.0
+max      245132.0
+Name: OvertimePay, dtype: float64
+count    112464.0
+mean      25014.0
+std       15399.0
+min         -14.0
+25%       11561.0
+50%       28631.0
+75%       35569.0
+max       96571.0
+Name: Benefits, dtype: float64
+count    148619.0
+mean      93715.0
+std       62784.0
+min           2.0
+25%       44134.0
+50%       92420.0
+75%      132889.0
+max      567595.0
+Name: TotalPayBenefits, dtype: float64
+
+displays mean benefits ,overtimepay, otherpay and totalpay+benefits year-wise
+      Benefits  OvertimePay  OtherPay  TotalPayBenefits
+Year                                                   
+2011       NaN       4532.0    3617.0           71752.0
+2012   26440.0       5023.0    3653.0          100553.0
+2013   23831.0       5282.0    3820.0          101449.0
+2014   24805.0       5405.0    3508.0          100325.0
+display the number of unique job titles
+1636
+display the top 15 most common jobs
+TRANSIT OPERATOR                9422
+SPECIAL NURSE                   5791
+REGISTERED NURSE                4955
+CUSTODIAN                       3211
+FIREFIGHTER                     3153
+RECREATION LEADER               2663
+DEPUTY SHERIFF                  2618
+PUBLIC SVC AIDE-PUBLIC WORKS    2518
+POLICE OFFICER 3                2418
+PATIENT CARE ASSISTANT          1945
+PUBLIC SERVICE TRAINEE          1656
+ATTORNEY (CIVIL/CRIMINAL)       1503
+POLICE OFFICER                  1476
+PORTER                          1465
+GENERAL LABORER                 1406
+Name: JobTitle, dtype: int64
+
+displays top 5 most common jobs year-wise
+2011
+TRANSIT OPERATOR    2386
+SPECIAL NURSE       1402
+REGISTERED NURSE    1219
+CUSTODIAN            796
+FIREFIGHTER          794
+Name: JobTitle, dtype: int64
+2012
+TRANSIT OPERATOR    2262
+SPECIAL NURSE       1466
+REGISTERED NURSE    1271
+POLICE OFFICER 3     864
+CUSTODIAN            825
+Name: JobTitle, dtype: int64
+2013
+TRANSIT OPERATOR                2295
+SPECIAL NURSE                   1445
+REGISTERED NURSE                1231
+PUBLIC SVC AIDE-PUBLIC WORKS     859
+CUSTODIAN                        789
+Name: JobTitle, dtype: int64
+2014
+TRANSIT OPERATOR                2479
+SPECIAL NURSE                   1478
+REGISTERED NURSE                1234
+PUBLIC SVC AIDE-PUBLIC WORKS     916
+FIREFIGHTER                      815
+Name: JobTitle, dtype: int64
+displays mean benefits ,overtimepay, otherpay and totalpay+benefits job-wise
+                                  Benefits   OvertimePay  TotalPayBenefits
+JobTitle                                                                  
+CUSTODIAN                     21140.400402   1523.249281      61390.779991
+DEPUTY SHERIFF                33199.527869  12998.925966     130329.565470
+FIREFIGHTER                   37235.092047  27326.184209     172080.749562
+PATIENT CARE ASSISTANT        17483.759362   5470.241738      64597.847460
+POLICE OFFICER 3              32870.463883  16438.432419     167944.733069
+PUBLIC SVC AIDE-PUBLIC WORKS   1379.748050     60.017744       9622.057502
+RECREATION LEADER               441.171857      2.057172       6809.527214
+REGISTERED NURSE              35950.834170   4086.595756     140573.341954
+SPECIAL NURSE                  3210.342240    639.714284      35150.350554
+TRANSIT OPERATOR              27355.597533  11195.757363      84400.661140
+
+display the top 10 job titles with with highest mean TotalPayBenefits
+JobTitle
+CHIEF INVESTMENT OFFICER                          436224.0
+CHIEF, FIRE DEPARTMENT                            408865.0
+GENERAL MANAGER-METROPOLITAN TRANSIT AUTHORITY    399211.0
+GEN MGR, PUBLIC TRNSP DEPT                        380696.0
+CHIEF OF POLICE                                   375797.0
+DEP DIR FOR INVESTMENTS, RET                      355731.0
+ADM, SFGH MEDICAL CENTER                          347080.0
+CONTROLLER                                        343061.0
+ASST CHF OF DEPT (FIRE DEPT)                      342598.0
+DEPT HEAD V                                       340644.0
+Name: TotalPayBenefits, dtype: float64
+
+display the top 10 job titles with with lowest mean TotalPayBenefits
+JobTitle
+PUBLIC SAFETY COMMUNICATIONS TECHNICIAN                150.0
+BOARD/COMMISSION MEMBER, GROUP II                      297.0
+BDCOMM MBR, GRP2,M=$25/MTG                             475.0
+BOARD/COMMISSION MEMBER, GROUP III                     639.0
+SPECIAL ASSISTANT XIV                                  674.0
+BDCOMM MBR, GRP3,M=$50/MTG                             973.0
+BOARD/COMMISSION MEMBER, GROUP V                      1196.0
+BDCOMM MBR, GRP5,M$100/MO                             1275.0
+SPECIAL EXAMINER                                      1578.0
+AIRPORT ASSISTANT DEPUTY DIRECTOR, BUSINESS ADMINI    1928.0
+Name: TotalPayBenefits, dtype: float64
+
+People with chief in jobtitle  627
+People working in public related sectors  6519
+People working in Police department  8198
+People working in Fire department  5879
+
+mean Total pay + benefits : 
+Chief  198384.0
+Public sector  31083.0
+Police department  142783.0
+Fire department  180634.0
+
+Here you can see the difference in mean pay scale for public sector jobs vs all jobs
+Public Sector
+      Benefits  OvertimePay  OtherPay  TotalPayBenefits
+Year                                                   
+2011       NaN       1073.0    1483.0           25510.0
+2012    9364.0       1131.0    1117.0           35256.0
+2013    6925.0       1219.0    1036.0           31572.0
+2014    7291.0       1582.0     949.0           32444.0
+All Jobs
+      Benefits  OvertimePay  OtherPay  TotalPayBenefits
+Year                                                   
+2011       NaN       4532.0    3617.0           71752.0
+2012   26440.0       5023.0    3653.0          100553.0
+2013   23831.0       5282.0    3820.0          101449.0
+2014   24805.0       5405.0    3508.0          100325.0
+
+Here you can see that the difference in mean overtimepay received by the police department and fire department
+Police department  11981.0
+Fire department  26365.0
